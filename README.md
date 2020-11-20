@@ -11,9 +11,23 @@ About
 
 PGPainless aims to make using OpenPGP in Java projects as simple as possible.
 It does so by introducing an intuitive Builder structure, which allows easy 
-setup of encryption / decrytion operations, as well as straight forward key generation.
+setup of encryption / decryption operations, as well as straight forward key generation.
 
 PGPainless is based around the Bouncycastle java library and can be used on Android down to API level 9.
+
+## Philosophy
+
+* Prefer enums over magic constants
+
+  When a method takes an integer constant as argument, it is not clear to the user where to source possible values from.
+  An enum on the other hand only allows for a limited range of possible values and it is immediately clear to the user which values these are.
+  
+* Prefer builder methods over dependency injection
+
+  While dependency injection has its place in software development, the user is often overwhelmed with methods
+  that take dozens of arguments. It may not be obvious to the user what those arguments are used for.
+  Instead the user should be guided by the API with builder classes and methods that make it clear what the parameters use is.
+  Additionally sensible defaults should be provided as shortcuts.
 
 ### NOTE: PGPainless is in an early state of development. There may be dragons!
 
