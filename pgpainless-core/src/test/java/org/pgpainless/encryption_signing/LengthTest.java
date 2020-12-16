@@ -26,7 +26,6 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.bouncycastle.openpgp.PGPException;
 import org.bouncycastle.openpgp.PGPPublicKeyRing;
 import org.bouncycastle.openpgp.PGPSecretKeyRing;
@@ -96,7 +95,6 @@ public class LengthTest {
         encryptDecryptForSecretKeyRings(sender, recipient);
     }
 
-    @Ignore
     private void encryptDecryptForSecretKeyRings(PGPSecretKeyRing senderSec, PGPSecretKeyRing recipientSec)
             throws PGPException,
             IOException {
